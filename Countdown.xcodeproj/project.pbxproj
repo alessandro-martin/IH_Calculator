@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A703A76619E4159D0048D005 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A703A76519E4159D0048D005 /* MainView.xib */; };
 		A773604919E3CAA6009DA599 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A773604819E3CAA6009DA599 /* main.m */; };
 		A773604C19E3CAA6009DA599 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A773604B19E3CAA6009DA599 /* AppDelegate.m */; };
 		A773604F19E3CAA6009DA599 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A773604E19E3CAA6009DA599 /* ViewController.m */; };
@@ -14,6 +15,7 @@
 		A773605419E3CAA6009DA599 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A773605319E3CAA6009DA599 /* Images.xcassets */; };
 		A773605719E3CAA6009DA599 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A773605519E3CAA6009DA599 /* LaunchScreen.xib */; };
 		A773606319E3CAA6009DA599 /* CountdownTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A773606219E3CAA6009DA599 /* CountdownTests.m */; };
+		A7CB0C4619E3FCEF00037F14 /* countdown.c in Sources */ = {isa = PBXBuildFile; fileRef = A773606C19E3CABC009DA599 /* countdown.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A703A76519E4159D0048D005 /* MainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		A773604319E3CAA6009DA599 /* Countdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A773604719E3CAA6009DA599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A773604819E3CAA6009DA599 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +43,9 @@
 		A773605C19E3CAA6009DA599 /* CountdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A773606119E3CAA6009DA599 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A773606219E3CAA6009DA599 /* CountdownTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountdownTests.m; sourceTree = "<group>"; };
+		A773606C19E3CABC009DA599 /* countdown.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = countdown.c; sourceTree = "<group>"; };
+		A773606D19E3CABC009DA599 /* countdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = countdown.h; sourceTree = "<group>"; };
+		A7D73FBC19E3D4EB000D9F46 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 		A773603A19E3CAA6009DA599 = {
 			isa = PBXGroup;
 			children = (
+				A7D73FBC19E3D4EB000D9F46 /* readme.md */,
 				A773604519E3CAA6009DA599 /* Countdown */,
 				A773605F19E3CAA6009DA599 /* CountdownTests */,
 				A773604419E3CAA6009DA599 /* Products */,
@@ -81,13 +88,13 @@
 		A773604519E3CAA6009DA599 /* Countdown */ = {
 			isa = PBXGroup;
 			children = (
+				A7D73FBA19E3D44D000D9F46 /* Resources */,
 				A773604A19E3CAA6009DA599 /* AppDelegate.h */,
 				A773604B19E3CAA6009DA599 /* AppDelegate.m */,
-				A773604D19E3CAA6009DA599 /* ViewController.h */,
-				A773604E19E3CAA6009DA599 /* ViewController.m */,
-				A773605019E3CAA6009DA599 /* Main.storyboard */,
-				A773605319E3CAA6009DA599 /* Images.xcassets */,
-				A773605519E3CAA6009DA599 /* LaunchScreen.xib */,
+				A7D73FB919E3D3B5000D9F46 /* View */,
+				A7D73FB819E3D3AB000D9F46 /* Model */,
+				A7D73FB719E3D391000D9F46 /* Controller */,
+				A7D73FBB19E3D49F000D9F46 /* Util */,
 				A773604619E3CAA6009DA599 /* Supporting Files */,
 			);
 			path = Countdown;
@@ -119,6 +126,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A7D73FB719E3D391000D9F46 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A773604D19E3CAA6009DA599 /* ViewController.h */,
+				A773604E19E3CAA6009DA599 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A7D73FB819E3D3AB000D9F46 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A7D73FB919E3D3B5000D9F46 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A773605019E3CAA6009DA599 /* Main.storyboard */,
+				A773605519E3CAA6009DA599 /* LaunchScreen.xib */,
+				A703A76519E4159D0048D005 /* MainView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A7D73FBA19E3D44D000D9F46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A773605319E3CAA6009DA599 /* Images.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A7D73FBB19E3D49F000D9F46 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A773606D19E3CABC009DA599 /* countdown.h */,
+				A773606C19E3CABC009DA599 /* countdown.c */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A773606619E3CAA6009DA599 /* Build configuration list for PBXNativeTarget "Countdown" */;
 			buildPhases = (
+				A7CB0C4519E3F42500037F14 /* ShellScript */,
 				A773603F19E3CAA6009DA599 /* Sources */,
 				A773604019E3CAA6009DA599 /* Frameworks */,
 				A773604119E3CAA6009DA599 /* Resources */,
@@ -200,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A773605219E3CAA6009DA599 /* Main.storyboard in Resources */,
+				A703A76619E4159D0048D005 /* MainView.xib in Resources */,
 				A773605719E3CAA6009DA599 /* LaunchScreen.xib in Resources */,
 				A773605419E3CAA6009DA599 /* Images.xcassets in Resources */,
 			);
@@ -214,12 +266,29 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A7CB0C4519E3F42500037F14 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "echo \"I'm gonna compile dude!!!\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A773603F19E3CAA6009DA599 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A773604F19E3CAA6009DA599 /* ViewController.m in Sources */,
+				A7CB0C4619E3FCEF00037F14 /* countdown.c in Sources */,
 				A773604C19E3CAA6009DA599 /* AppDelegate.m in Sources */,
 				A773604919E3CAA6009DA599 /* main.m in Sources */,
 			);
@@ -412,6 +481,7 @@
 				A773606819E3CAA6009DA599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A773606919E3CAA6009DA599 /* Build configuration list for PBXNativeTarget "CountdownTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +490,7 @@
 				A773606B19E3CAA6009DA599 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
